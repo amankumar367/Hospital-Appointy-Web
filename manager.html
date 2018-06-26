@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Hospital Appointy</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/manstyle.css">
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a><button class="btn btn-primary" id="editBtn" type="button" onclick="updateProfile(data)">Edit Profile</button></a></li>
+        <li><a><button class="btn btn-primary" type="button" onclick="logout()">Log Out</button></a></li>
+      
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Hospital Appointy</h1> 
+  <p>the Manager panal</p> 
+  
+</div>
+
+
+<div class="container fluid">
+
+  <button type="button" class="btn btn-primary btn-block" onclick="checkState()">Button 1</button>
+
+
+
+</div>
+
+
+<div class="container">
+  <h2 class="text-center">SEARCH PANAL</h2>
+  <p>YOU CAN SEARCH BY DOCTOR NAME AND SPECIALIZATION....</p>
+  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <br>
+  <table class="table table-striped" id="tableshow">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Specialization</th>
+        <th>Shifting</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+   
+  </table>
+</div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button  type="button" class="close" data-dismiss="modal" id="close-btn">&times;</button>
+          <h4 class="modal-title" id="model-head">Enter the update login</h4>
+        </div>
+        <div class="modal-body">
+          
+                
+                  <label>Enter Email</label>
+                  <input type="email" class="form-control" id="Email" disabled>
+
+                   <label>Enter New Password</label>
+                  <input type="password" class="form-control" id="pwd1" disabled>
+
+                    <label >Enter Age</label>
+                  <input type="text" class="form-control" id="Age">
+
+                  <label>Enter Address</label>
+                  <input type="text" class="form-control" id="Address">
+                  
+                  <label>Enter Contact</label>
+                  <input type="text" class="form-control" id="Contact">
+             
+                <label>Enter Experiance</label>
+                  <input type="text" class="form-control" id="Experiance">
+             
+             <label>Enter Specialization</label>
+                  <input type="text" class="form-control" id="Specialization" disabled>
+                 
+                <select id="Gender" disabled>
+	                      <option value="Male">Male</option>
+	                      <option value="Female" selected="selected">Female</option>
+	        
+	                  </select>
+                
+                <label>Enter Name</label>
+                  <input type="text" class="form-control" id="Name">
+                
+               
+
+                <div id="update_checkbox_div">
+                <input type="checkbox" id="update_checkbox" onclick="check()"><p>click checkbox to change the shift of doctor</p>  
+                </div>
+
+
+                <div id="update_image"> 
+                  <label>Select the shifting of doctor</label>
+	                  <select id="selectbox1">
+	                      <option value="Morning">Morning</option>
+	                      <option value="Evening" selected="selected">Evening</option>
+	        
+	                  </select>
+                  <br/>
+                 
+
+                  <script>
+                  
+                </script>
+                </div>
+                
+
+                <button type="submit" class="btn btn-danger" data-dismiss="modal"  id="modal-button" onclick="setUpdate()" >Update</button>
+              
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+    </div> 
+</div>
+
+  <!-- model ended -->
+
+
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#mytable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-messaging.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-functions.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCf-Gf-VaHnV12k2_elsrF49EYkEkEIcps",
+    authDomain: "hospitalappointy-bc0aa.firebaseapp.com",
+    databaseURL: "https://hospitalappointy-bc0aa.firebaseio.com",
+    projectId: "hospitalappointy-bc0aa",
+    storageBucket: "hospitalappointy-bc0aa.appspot.com",
+    messagingSenderId: "15885979934"
+  };
+  firebase.initializeApp(config);
+</script>
+<script type="text/javascript" src="js/manjs.js"></script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+
+<html lang="en">
+
+    <head>
+        
+        <title>Hospital Appointy</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    </head>
+
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+          <div class="container">
+            <div class="navbar-header">
+              <button t width=100ype="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+              </button>
+              
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#about">Login</a></li>
+              
+                <li><a href="#signup1">Registration</a></li>
+              
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="jumbotron text-center">
+
+                             <a class="navbar-brand" href="#myPage">
+                            <img class="logo" class="img-responsive" src="img/lo.png" alt="" style="width:100%;"></a>
+
+          <h1>Hospital Appointy</h1> 
+          <p>The Hospital that change your Thinking</p> 
+          
+        </div>
+
+        <!-- Container (About Section) -->
+        <div id="about" class="container-fluid">
+            
+            <div class="row">
+                <div class="col-sm-6 text-center" id="sign1">
+                  <h2 class=" text-center login-title">Login Page</h2>
+                        <div class="ac">
+
+                            <img class="profile-img" src="img/lo.png" alt="">
+                            
+                            <input type="text" class="form-control" placeholder="Email" required autofocus id="email">
+                            <input type="password" class="form-control" placeholder="Password" required id="password">
+
+
+                            <button id="shubh" class="btn btn-lg btn-block "  onclick="login()"> Sign in </button>
+
+                          
+                        </div>
+                        <a href="#signup1" class="text-center new-account">Create an account </a>
+                </div>
+                
+              
+                <div class="col-sm-6" id="sign2">
+                 
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators which shows slide count -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#myCarousel" data-slide-to="1"></li>
+                      <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+
+                      <div class="item active">
+                        <img src="img/la.jpg" alt="Los Angeles" style="width:100%;">
+                        <div class="carousel-caption">
+                          <h3>Hospital Appointy</h3>
+                          <p>A hospital is no place to be sick.</p>
+                        </div>
+                      </div>
+
+                      <div class="item">
+                        <img src="img/chicago.jpg" style="width:100%;">
+                        <div class="carousel-caption">
+                          <h3>Hospital Appointy</h3>
+                          <p>A hospital is a good place to set various dilemmas.</p>
+                        </div>
+                      </div>
+                    
+                      <div class="item">
+                        <img src="img/ny.jpg"  style="width:100%;">
+                        <div class="carousel-caption">
+                          <h3>Hospital Appointy</h3>
+                          <p>I can't keep track of my hospital time. It all sort of blurs together.</p>
+                        </div>
+                  </div>
+              
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+                </div>
+              </div>
+
+            </div>
+        </div>
+
+
+        <div id="services" class="container-fluid text-center">
+          <h2>Sign up</h2>
+          <h4>We offer sign up as manger and doctor </h4>
+          <br>
+          <div class="row slideanim">
+            <div class="col-sm-6 page-header">
+              <span class="glyphicon glyphicon-heart logo-small"></span>
+              <a href="#signupdoctor" ><h4 onclick="logout()">SignUP as Doctor</h4></a> 
+            </div>
+            <div class="col-sm-6 page-header">
+              <span class="glyphicon glyphicon-user logo-small"></span>
+              <a href="#signupmanger"><h4>Sign Up as Manager</h4></a>
+            </div>
+           
+
+        <div class="container" id="signup1">
+
+              <h3>Input Groups</h3>
+              <p>This is the signn uppage</p>
+              
+              <form class="form-horizontal">
+                <div class="input-group col-xs-12">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                  <input id="name" type="text" class="form-control" name="email" placeholder="Enter Name" required>
+                </div>
+                <br>
+                   
+                <div class="input-group col-xs-12">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                  <input id="email1" type="Email" class="form-control" name="password" placeholder="Enter Email">
+                </div>
+                <br>
+                <div class="input-group col-sm-12">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                  <input id="password1" type="password" class="form-control" name="msg" placeholder="Enter Password">
+                </div>
+              <br>
+               <div class="input-group col-xs-12">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-tasks"></i></span>
+                  <input id="age" type="Email" class="form-control" name="password" placeholder="Enter your Age">
+                </div>
+                <br>
+               <div class="input-group col-sm-12">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-education"></i></span>
+                  <input id="education" type="text" class="form-control" name="education" placeholder="Enter Higer Education">
+                </div>
+             
+              <br> 
+               <div class="input-group col-sm-12">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-education"></i></span>
+                  <input id="experiance" type="text" class="form-control" name="msg" placeholder="Enter Experiance">
+                </div>
+              <br>
+               <div class="input-group col-sm-12">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                  <input id="contact" type="text" class="form-control" name="msg" placeholder="Enter Contact no">
+                </div>
+              <br>
+                <div class="input-group col-xs-12">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                  <input id="address" type="text" class="form-control" name="email" placeholder="Enter Full Address">
+                </div>
+                <br>
+             
+
+  <div class="container text-left">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-modal-window"></i>
+                  <label class="text-left">Specialization</label>
+                  <select id="specialization">
+  <option value="Anesthesiologist">Anesthesiologist</option>
+  <option value="Cardiologist" selected="selected">Cardiologist</option>
+  <option value="Dermatologists">Dermatologists</option>
+    <option value="Endocrinologists">Endocrinologists</option>
+      <option value="Gastroenterologists">Gastroenterologists</option>
+        <option value="Hematologists">Hematologists</option>
+          <option value="Internists">Internists</option>
+            <option value="Nephrologists">Nephrologists</option>
+              <option value="Neurologists">Neurologists</option>
+                <option value="Oncologists">Oncologists</option>
+                  <option value="Ophthalmologists">Ophthalmologists</option>
+                    <option value="Osteopaths ">Osteopaths</option>
+                      <option value="Otolaryngologists ">Otolaryngologists</option>
+                        <option value="Pathologists ">Pathologists</option>
+                          <option value="Pediatricians ">Pediatricians</option>
+                            <option value="Physiatrists ">Physiatrists</option>
+                              <option value="Plastic Surgeons ">Plastic Surgeons</option>
+                                <option value="Podiatrists ">Podiatrists</option>
+                                 <option value="Psychiatrists  ">Psychiatrists</option>
+                                  <option value="Pulmonologists ">Pulmonologists</option>
+                                   <option value="Radiologists ">Radiologists</option>
+                                   <option value="Rheumatologists ">Rheumatologists</option>
+                                    <option value="Urologists ">Urologists</option>
+                                    <option value="Marketing ">Marketing</option>
+                                    <option value="Hospital Management">Hospital Management</option>
+                                    <option value="Finance Management">Finance Management</option>
+                                    <option value="Healthcare Policy Management ">Healthcare Policy Management</option>
+                                  </span>
+                                     
+
+</select>
+
+                </div>
+
+            <div class="form-group">
+                    <label class="col-lg-2 control-label">Gender</label>
+                    <div class="col-lg-2" id="gender">
+                        <label class="radio-inline"> <input type="radio" name="clouds" id="male" value="male" checked> Male</label>
+                        <label class="radio-inline"> <input type="radio" name="clouds" id="female" value="female"> Female </label>
+                    </div>
+                </div>
+                <br>
+              
+              
+                <div class="col-sm-6">
+            <button type="button" class="btn btn-primary btn-sm btn-block " id="btndoc" onclick="register('doctor')">Conform as Doctor</button></div>
+             <div class="col-sm-6">
+            <button type="button" onclick="register('manager')" class="btn btn-primary btn-sm btn-block " id="btnmag">Conform as Manager</button>
+            </div>
+             </form>
+
+        </div>
+
+
+
+     
+
+       
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-messaging.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-functions.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCf-Gf-VaHnV12k2_elsrF49EYkEkEIcps",
+    authDomain: "hospitalappointy-bc0aa.firebaseapp.com",
+    databaseURL: "https://hospitalappointy-bc0aa.firebaseio.com",
+    projectId: "hospitalappointy-bc0aa",
+    storageBucket: "hospitalappointy-bc0aa.appspot.com",
+    messagingSenderId: "15885979934"
+  };
+  firebase.initializeApp(config);
+</script>
+
+
+
+
+        <script type="text/javascript" src="js/index.js"></script>
+
+
+    </body>
+</html>

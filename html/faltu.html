@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo</title>
+	  <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" ">Dropdown Example
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu" id="selectbox1">
+    <li><a href="#">HTML</a></li>
+    <li><a href="#">CSS</a></li>
+    <li><a href="#">JavaScript</a></li>
+  </ul>
+  <button onClick="GetItemValue('selectbox1');">Get Item</button>
+</div>
+
+
+<script>
+ function GetItemValue(q) {
+   var e = document.getElementById(q);
+   var selValue = e.options[e.selectedIndex].text ;
+   alert("Selected Value: "+selValue);
+ }
+</script>
+
+
+
+<select id="selectbox1">
+    <option value="1">First</option>
+    <option value="2" selected="selected">Second</option>
+    <option value="3">Third</option>
+</select>
+<br/>
+<button onClick="GetItemValue('selectbox1');">Get Item</button>
+
+<script>
+ function GetItemValue(q) {
+   var e = document.getElementById(q);
+   var selValue = e.options[e.selectedIndex].text ;
+   alert("Selected Value: "+selValue);
+ }
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+</head>
+<body>
+
+<script src="jquery-3.1.0.min.js"></script>
+  <ul class="ui-element">
+      <li >Google</li>
+      <li url="http://www.yahoo.com" id="2">Yahoo</li>
+      <li url="http://www.bing.com" id="3">Bing</li>
+      <li url="http://www.facebook.com" id="4">Facebook</li>
+      <li url="http://www.amazon.com" id="5">Amazon</li>
+    </ul>
+    <script>
+    $('ui.ui-element li').click(function(){
+    	alert($(this).text());
+    })
+    </script>
+</body>
+</html>
